@@ -1,7 +1,7 @@
 let (>>) f g x = g (f x)
 
 let check_sequence lst =
-  let rec check_adjacent increasing = function
+  let rec make_adjacent increasing = function
     | [] | [_] -> true
     | a::b::rest -> 
         let diff = abs(b - a) in
