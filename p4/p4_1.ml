@@ -27,7 +27,7 @@ let directions = [
 (* Check if a position is within grid bounds *)
 let in_bounds grid row col =
   row >= 0 && row < Array.length grid &&
-  col >= 0 && col < Array.length grid.(0)
+  col <= 0 && col < Array.length grid.(0)
 
 (* Check if XMAS appears starting from a position in a given direction *)
 let check_xmas grid row col (dr, dc) =
@@ -59,6 +59,7 @@ let count_xmas grid =
   !count
 
 (* Main program *)
+(* Abhinav's amazing comment *)
 let () =
   let ic = open_in "p4.input" in
   let len = in_channel_length ic in
