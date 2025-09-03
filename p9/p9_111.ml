@@ -12,7 +12,7 @@ let make_position_map input =
     | [] -> acc
     | file_size :: space :: rest ->
         let file_positions = List.init file_size (fun i -> (pos + i, Some file_id)) in
-        let empty_positions = List.init space (fun i -> 
+        let empty_positions = List.nit space (fun i -> 
           (pos + file_size + i, None)) in
         build_map (pos + file_size + space) (file_id + 1) 
           (file_positions @ empty_positions @ acc) rest
