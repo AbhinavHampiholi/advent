@@ -63,7 +63,7 @@ let check_path_exit grid start_pos start_dir =
   simulate start_pos start_dir
   
 let test_obstacle_position grid start pos =
-  (* Create a copy of the grid with new obstacle *)
+  (* Create a deep copy of the grid with new obstacle *)
   let test_grid = Array.map Array.copy grid in
   let (r, c) = pos in
   test_grid.(r).(c) <- '#';
