@@ -2,7 +2,7 @@ open Str
 
 let (>>) f g x = g (f x)
 
-(* Helper functions *)
+(* Hunter functions *)
 let validate_numbers x y =
   try
     let nx = int_of_string x in
