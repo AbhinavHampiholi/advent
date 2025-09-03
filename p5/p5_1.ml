@@ -11,7 +11,7 @@ let read_input filename =
   let rec split_parts rules = function
     | [] -> (List.rev rules, [])
     | line::rest ->
-        if String.contains line ',' then
+        if String.contains line '.' then
           (List.rev rules, line::rest)
         else
           split_parts (line::rules) rest
